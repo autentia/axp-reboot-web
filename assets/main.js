@@ -1,36 +1,31 @@
 (() => {
-  const header = document.querySelector('.header')
 
   function addListenerToScroll() {
-    window.onscroll = () => {
+    const header = document.querySelector('.header')
+    window.addEventListener('scroll', debounce(() => {
       const scrollPosY = window.pageYOffset | document.body.scrollTop;
-      const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) / 2;
 
       if(scrollPosY > vh) {
         header.classList.add('header--scrolled')
       } else {
         header.classList.remove('header--scrolled')
       }
-    }
+    }, 250))
   }
 
   function addLinksListeners() {
-    const links = [
-      'home',
-      'organizers',
-      'call-for-papers',
-      'code-of-conduct',
-      'info',
-      'venue'
-    ]
+    const links = document.querySelectorAll('[data-link]')
 
-    const targets = links.map(link => document.querySelector(`[data-link="${link}"]`))
-
-    targets.forEach(target => {
-      target.addEventListener('click', (e) => {
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
         e.preventDefault()
-        applyActiveLinkStyles(target)
-        navigateTo(target.dataset.link)
+
+        if (link.classList.contains('header__link')) {
+          applyActiveLinkStyles(link)
+        }
+
+        navigateTo(link.dataset.link)
       }, false)
     })
   }
@@ -47,6 +42,22 @@
   function navigateTo(destination) {
     const element = document.getElementById(destination)
     element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
+  function debounce(fn, wait, immediate) {
+    let timeout;
+    return () => {
+      var context = this, args = arguments;
+      var later = () => {
+        timeout = null;
+        if (!immediate) fn.apply(context, args);
+      }
+
+      let callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) fn.apply(context, args);
+    }
   }
 
   addListenerToScroll()

@@ -9,7 +9,7 @@
           <a data-link="home" class="header__link" href="#">Logo</a>
         </div>
         <div>
-          <a data-link="info" class="header__link" href="#">Información</a>
+          <a data-link="info" class="header__link" href="#">Sobre AXP</a>
         </div>
         <div>
           <a data-link="call-for-papers" class="header__link" href="#">Call for papers</a>
@@ -28,8 +28,47 @@
       <section class="hero">
         <span class="anchor" id="home"></span>
         <h1>AXP</h1>
-        <p>Al borde de la mayoría de edad del Manifiesto Ágil, ¿no crees que Negocio e IT siguen caminos independientes? AXP Rebbot, recordemos nuestros orígenes volviendo a los valores iniciales.</p>
+        <p>Al borde de la mayoría de edad del <strong>Manifiesto Ágil</strong>, <em>¿no crees que Negocio e IT siguen caminos independientes?</em> <strong>AXP Reboot</strong>, recordemos nuestros orígenes volviendo a los valores iniciales.</p>
         <button>Call to action</button>
+
+        <div class="hero__animation">
+          <div class=" hero__animation--1">
+            <svg id="organic-blob" width="300" height="300" xmlns="http://www.w3.org/2000/svg" filter="url(#goo)">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                  <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                </filter>
+              </defs>
+              <circle id="blob-1"></circle>
+              <circle id="blob-2"></circle>
+              <circle id="blob-3"></circle>
+              <circle id="blob-4"></circle>
+            </svg>
+
+          </div>
+
+          <div class=" hero__animation--2">
+            <svg id="organic-blob" width="300" height="300" xmlns="http://www.w3.org/2000/svg" filter="url(#goo)">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                  <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+                </filter>
+              </defs>
+              <circle id="blob-2"></circle>
+              <circle id="blob-1"></circle>
+              <circle id="blob-4"></circle>
+              <circle id="blob-3"></circle>
+            </svg>
+          </div>
+        </div>
+
+        <div class="hero__curve">
+          <img src="/static/imgs/curve.svg" alt="">
+        </div>
       </section>
 
       <section class="info">
@@ -41,9 +80,13 @@
       </section>
 
       <section class="call-for-papers">
-        <span class="anchor" id="call-for-papers"></span>
-        <h2>Call for papers</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis, voluptatibus libero error consequatur voluptates eius sequi pariatur possimus incidunt neque illum animi voluptatem nobis impedit odit itaque, nesciunt eaque.
+        <div class="call-for-papers__wrapper">
+          <span class="anchor" id="call-for-papers"></span>
+          <h2>Call for papers</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis, voluptatibus libero error consequatur voluptates eius sequi pariatur possimus incidunt neque illum animi voluptatem nobis impedit odit itaque, nesciunt eaque.
+          </p>
+        </div>
       </section>
 
       <section class="organizers">
@@ -62,7 +105,10 @@
       <section class="venue">
         <span class="anchor" id="venue"></span>
         <h2>Localización</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit blanditiis voluptates eos. Nobis, officiis ea. Odio numquam nostrum voluptas quis id nulla, aliquid quisquam omnis itaque vero atque laudantium ut.</p>
+        <div class="venue__wrapper">
+          <p class="venue__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit blanditiis voluptates eos. Nobis, officiis ea. Odio numquam nostrum voluptas quis id nulla, aliquid quisquam omnis itaque vero atque laudantium ut.</p>
+          <iframe class="venue__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3036.0923930245426!2d-3.5094689296982438!3d40.4510919877913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ses!4v1517842177686" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
       </section>
 
       <section class="code-of-conduct">
@@ -72,7 +118,43 @@
       </section>
 
       <footer class="footer">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit porro eaque dicta laboriosam magni eum aliquid unde officia doloribus fugiat ratione, dolore tempore voluptates corporis! Aliquam dolor iure quia voluptate.
+        <div class="footer__wrapper">
+          <div class="footer__description">
+            <h2>AXP Reboot</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ipsum magnam saepe nesciunt aliquid, ea adipisci. Eum dignissimos repellat alias incidunt iure blanditiis autem est corrupti, ut earum ducimus velit?</p>
+          </div>
+          <div>
+            <h2>Contacto</h2>
+            <div>
+              <a href="callto:+341233112">123 345 123</a>
+              <a href="mailto:info@axp-reboot.com">info@axp-reboot.com</a>
+            </div>
+          </div>
+          <div>
+            <h2>Síguenos</h2>
+            <div>
+              <a href="#">Twitter</a>
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">Youtube</a>
+            </div>
+          </div>
+        </div>
+
+        <section class="footer__subfooter">
+          <div>
+            <a data-link="home" href="#">Logo</a>
+            <a data-link="info" href="#">Sobre AXP</a>
+            <a data-link="call-for-papers" href="#">Call for papers</a>
+            <a data-link="venue" href="#">Localización</a>
+            <a data-link="organizers" href="#">Organizadores</a>
+            <a data-link="code-of-conduct" href="#">Código de conducta</a>
+          </div>
+
+          <div>
+            <a href="#">Código de conducta</a>
+          </div>
+        </section>
       </footer>
 
     </main>
