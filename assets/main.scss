@@ -1,6 +1,251 @@
 ---
 ---
 
+:root {
+  --primary-color: #f9636c;
+  --secondary-color: orange;
+  --primary-gradient: linear-gradient(to right, #6147d5, #5dabdb);
+  --secondary-gradient: linear-gradient(to left top, var(--primary-color), var(--secondary-color));
+
+  --spacing: 1rem;
+  --spacing-s: 0.5rem;
+  --spacing-m: 2rem;
+  --spacing-x: 4rem;
+
+  --border: 999px;
+
+  --title-font: 'Nunito', sans-serif;
+  --base-font: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
 body {
-  background-color: red;
+  background-color: white;
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgb(36, 36, 36);
+  font-family: var(--base-font);
+}
+
+// Base styles
+
+a {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 24px;
+  text-decoration: none;
+  color: var(--primary-color);
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+a:before, a:after {
+  content: "";
+  position: absolute;
+  transition: transform .5s ease;
+}
+
+a:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+  transform:  translateX(-100%);
+}
+
+a:hover:before {
+  transform:  translateX(0);
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: lighter;
+  background: var(--secondary-gradient);
+  color: white;
+  border: none;
+  position: relative;
+  padding: var(--spacing-s) var(--spacing-m);
+  z-index: 1;
+  letter-spacing: 0.15rem;
+  border-radius: var(--border);
+ 	background-size: 300% 300%;
+  transition: 0.5s ease all;
+  outline: 0;
+}
+
+button:after {
+  opacity: 0;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  border-radius: var(--border);
+  background: var(--secondary-gradient);
+  height: 100%;
+  filter: blur(10px);
+  transform: translateY(10px);
+  transition: 0.25s ease opacity;
+}
+
+button:hover {
+  animation: Gradient 2s ease infinite;
+  cursor: pointer;
+}
+
+button:hover:after {
+  opacity: 0.5;
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
+}
+
+// Page styles
+
+.anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100px);
+  visibility: hidden;
+}
+
+.main {
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas:
+  "h h h"
+  ". i ."
+  ". p ."
+  ". v ."
+  ". o ."
+  ". c ."
+  ". f .";
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.main > *{
+  margin: var(--spacing-x) 0;
+  position: relative;
+}
+
+// Header
+
+.header {
+  margin: 0;
+  position: fixed;
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  transition: 0.5s ease all;
+}
+
+.header--scrolled {
+  background-color: white;
+}
+
+.header--scrolled .header__link {
+  color: var(--primary-color);
+}
+
+.header__link {
+  border-top: 2px solid transparent;
+  padding: var(--spacing-s);
+  color: white;
+}
+
+.header__link--active {
+  border-top: 2px solid var(--primary-color);
+}
+
+.header__logo {
+  margin-right: auto;
+}
+
+// Hero
+
+.hero {
+  color: white;
+  grid-area: h;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--primary-gradient);
+}
+
+.hero > p {
+  max-width: 40rem;
+}
+
+// Info
+
+.info {
+  grid-area: i;
+}
+
+// Call for papers
+
+.call-for-papers {
+  grid-area: p;
+}
+
+// Organizers
+
+.organizers {
+  grid-area: o;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: var(--spacing-s);
+}
+
+.organizers > img {
+  width: 100%;
+  height: auto,
+}
+
+// Venue
+
+.venue {
+  grid-area: v;
+}
+
+// Code of conduct
+
+.code-of-conduct {
+  grid-area: c;
+}
+
+// Footer
+
+.footer {
+  grid-area: f;
 }

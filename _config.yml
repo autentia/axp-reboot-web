@@ -8,4 +8,5 @@ url: "https://axp-reboot.com"
 markdown: kramdown
 plugins:
   - jekyll-feed
-  
+livereload: true
+reload_port: 5678
