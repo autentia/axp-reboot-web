@@ -11,7 +11,7 @@
       } else {
         header.classList.remove('header--scrolled')
       }
-    }, 250))
+    }, 100))
   }
 
   function addLinksListeners() {

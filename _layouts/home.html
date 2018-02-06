@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-  <link href="https://fonts.googleapis.com/css?family=Nunito|Open+Sans:400,400i,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600|Open+Sans:400,400i,600" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <body>
     <main class="main">
       <header class="header">
-        <div class="header__logo">
-          <a data-link="home" class="header__link" href="#">Logo</a>
-        </div>
-        <div>
-          <a data-link="info" class="header__link" href="#">Sobre AXP</a>
-        </div>
-        <div>
-          <a data-link="call-for-papers" class="header__link" href="#">Call for papers</a>
-        </div>
-        <div>
-          <a data-link="venue" class="header__link" href="#">Localización</a>
-        </div>
-        <div>
-          <a data-link="organizers" class="header__link" href="#">Organizadores</a>
-        </div>
-        <div>
-          <a data-link="code-of-conduct" class="header__link" href="#">Código de conducta</a>
+        <div class="header__wrapper">
+          <div class="header__logo">
+            <a data-link="home" class="header__link" href="#">Logo</a>
+          </div>
+          <div>
+              <a data-link="home" class="header__link" href="#">Inicio</a>
+            </div>
+          <div>
+            <a data-link="info" class="header__link" href="#">Sobre AXP Reboot</a>
+          </div>
+          <div>
+            <a data-link="call-for-papers" class="header__link" href="#">CallForPapers</a>
+          </div>
+          <div>
+            <a data-link="venue" class="header__link" href="#">Localización</a>
+          </div>
+          <div>
+            <a data-link="organizers" class="header__link" href="#">Patrocinadores</a>
+          </div>
         </div>
       </header>
 
       <section class="hero">
         <span class="anchor" id="home"></span>
-        <h1>AXP</h1>
-        <p>Al borde de la mayoría de edad del <strong>Manifiesto Ágil</strong>, <em>¿no crees que Negocio e IT siguen caminos independientes?</em> <strong>AXP Reboot</strong>, recordemos nuestros orígenes volviendo a los valores iniciales.</p>
-        <button>Call to action</button>
+        <h2 id="hero__date">25 mayo 2018</h2>
+        <h1 class="hero__title">Agile eXPerience Reboot</h1>
+        <h3 class="hero__description">Al borde de la mayoría de edad del <strong>Manifiesto Ágil</strong>, <em>¿no crees que Negocio e IT siguen caminos independientes?</em> <strong>AXP Reboot</strong>, recordemos nuestros orígenes volviendo a los valores iniciales.</h3>
 
         <div class="hero__animation">
           <div class=" hero__animation--1">
@@ -49,7 +51,7 @@
 
           </div>
 
-          <div class=" hero__animation--2">
+          <div class="hero__animation--2">
             <svg id="organic-blob" width="300" height="300" xmlns="http://www.w3.org/2000/svg" filter="url(#goo)">
               <defs>
                 <filter id="goo">
@@ -66,14 +68,35 @@
           </div>
         </div>
 
+        <div class="hero__wave">
+            <svg viewBox="0 0 1366 251" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="AXPR" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -391.000000)">
+                    <g id="Cabecera" fill="#5DABDB">
+                        <g id="cabecera-montañas">
+                            <g id="wave" transform="translate(0.000000, 391.000000)">
+                                <path d="M1366,134.820006 L1366,166 C1226.95658,222.187143 1119.95651,250.280714 1044.99979,250.280714 C932.564705,250.280714 825.870043,238.036992 710.900444,205.588494 C576.97255,167.789294 492.238428,175.263274 437.139324,182.368314 C343.446217,194.450059 313.565803,216.935062 194.584621,216.935062 C181.490825,216.935062 168.492683,216.596169 155.590196,215.918382 C260.162533,128.69178 344.009941,76.7787567 407.132411,60.1793124 C476.458505,41.9484883 570.467485,70.0390412 689.15935,144.450971 C793.533484,63.3737539 924.73066,35.2832011 1082.75088,60.1793124 C1190.40322,77.1399559 1284.81959,102.020187 1366,134.820006 Z" id="Combined-Shape" fill-opacity="0.75"></path>
+                                <path d="M1366,0.289496009 L1366,166 C1226.95658,222.187143 1119.95651,250.280714 1044.99979,250.280714 C932.564705,250.280714 825.870043,238.036992 710.900444,205.588494 C658.925135,190.919219 614.35887,183.068511 576.058458,179.368626 C650.319639,115.368081 725.457088,10.1192317 837.961493,16.225139 C990.311479,24.49357 1068.49435,198.673251 1222.79891,121.764952 C1279.93458,93.2874581 1327.66828,52.7956393 1366,0.289496009 Z M396.71632,188.779921 C331.708226,201.024745 294.670134,216.935062 194.584621,216.935062 C127.188883,216.935062 62.3273428,207.956708 0,190 L0,139.208391 C95.5680715,35.4024869 183.33856,7.46421431 263.311465,55.393573 C331.326439,96.1563046 362.915051,151.900387 396.71632,188.779921 Z" id="Combined-Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+
         <div class="hero__curve">
-          <img src="/static/imgs/curve.svg" alt="">
+          <svg viewBox="0 0 1366 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs></defs>
+              <g id="Headhunting" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -742.000000)">
+                  <path d="M1366,742 L1366,836 L0,836 L0,766 C62.3273428,783.956708 127.188883,792.935062 194.584621,792.935062 C313.565803,792.935062 343.446217,770.450059 437.139324,758.368314 C492.238428,751.263274 576.97255,743.789294 710.900444,781.588494 C825.870043,814.036992 932.564705,826.280714 1044.99979,826.280714 C1119.95651,826.280714 1226.95658,798.187143 1366,742 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+              </g>
+          </svg>
         </div>
       </section>
 
       <section class="info">
         <span class="anchor" id="info"></span>
-        <h2>¿Qué es AXP?</h2>
+        <h2>Sobre AXP Reboot</h2>
         <p>¿Recuerdas cómo te enamoraste del Agilismo? Últimamente no hacemos más que ver la patente distancia entre el mundo de Negocio y Tecnología y recordamos nostálgicos cuando ambos campos crecían de la mano para favorecer un trabajo transversal lo más eficaz y productivo, sin olvidar la calidad del producto y la felicidad de los componentes de los equipos. ¿No te gustaría volver a una conferencia PARA TODOS?</p>
         <p>Ven al AXP Reboot y discute prácticas técnicas y de gestión, ¡aprendamos juntos! Un día. Dos tracks de charlas y talleres de los dos mundos para acercarlos.
         </p>
@@ -82,39 +105,43 @@
       <section class="call-for-papers">
         <div class="call-for-papers__wrapper">
           <span class="anchor" id="call-for-papers"></span>
-          <h2>Call for papers</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quis, voluptatibus libero error consequatur voluptates eius sequi pariatur possimus incidunt neque illum animi voluptatem nobis impedit odit itaque, nesciunt eaque.
-          </p>
+          <h2 class="call-for-papers__title">¿Te gustaría ser uno de los ponentes?</h2>
+          <p>Estaremos encantados de escucharte</p>
+          <button class="call-for-papers__button">Inscríbete</button>
         </div>
       </section>
 
+
       <section class="organizers">
         <span class="anchor" id="organizers"></span>
-        <h2>Organizadores</h2>
-        <img src="http://via.placeholder.com/300x300" alt="">
-        <img src="http://via.placeholder.com/300x300" alt="">
-        <img src="http://via.placeholder.com/300x300" alt="">
-        <img src="http://via.placeholder.com/300x300" alt="">
-        <img src="http://via.placeholder.com/300x300" alt="">
-        <img src="http://via.placeholder.com/300x300" alt="">
-        <img src="http://via.placeholder.com/300x300" alt="">
-        <img src="http://via.placeholder.com/300x300" alt="">
+        <p class="organizers__subtitle">Nuestros increíbles</p>
+        <h2 class="organizers__title">Patrocinadores</h2>
+        <div class="organizers__grid">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+          <img src="http://via.placeholder.com/300x300" alt="">
+        </div>
       </section>
 
       <section class="venue">
         <span class="anchor" id="venue"></span>
-        <h2>Localización</h2>
         <div class="venue__wrapper">
-          <p class="venue__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit blanditiis voluptates eos. Nobis, officiis ea. Odio numquam nostrum voluptas quis id nulla, aliquid quisquam omnis itaque vero atque laudantium ut.</p>
-          <iframe class="venue__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3036.0923930245426!2d-3.5094689296982438!3d40.4510919877913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ses!4v1517842177686" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <div class="venue__info">
+            <h2 class="venue__title">Localización</h2>
+            <h3>Universidad Politécnica de Madrid</h3>
+            <p class="venue__description">Calle Ramiro de Maeztu, 7 28040 Madrid</p>
+          </div>
+          <iframe class="venue__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.2031125892595!2d-3.721468484307082!3d40.44864126162146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422848cd3e2bb7%3A0x23f01d34c74a5c93!2sTechnical+University+of+Madrid!5e0!3m2!1sen!2ses!4v1517910999863" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-      </section>
-
-      <section class="code-of-conduct">
-        <span class="anchor" id="code-of-conduct"></span>
-        <h2>Código de conducta</h2>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias autem architecto rem enim recusandae aut et impedit hic. Sequi numquam optio sed accusantium in. Ipsa corporis numquam impedit magnam.
       </section>
 
       <footer class="footer">
