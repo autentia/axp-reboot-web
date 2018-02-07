@@ -1,0 +1,26 @@
+.venue {
+  grid-area: v;
+}
+
+.venue__wrapper {
+  display: flex;
+}
+
+.venue__info {
+  flex: 1;
+}
+
+.venue__title {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-x);
+}
+
+.venue__description {
+    padding-right: var(--spacing-m);
+  flex: 1;
+}
+
+.venue__map {
+  flex: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,113 @@
+.hero {
+  color: white;
+  grid-area: h;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding-bottom: 10rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--secondary-color);
+}
+
+.hero__description {
+  font-size: 1rem;
+  max-width: var(--container);
+  text-align: center;
+  margin-top: 0;
+  font-weight: 400;
+  font-family: var(--base-font);
+}
+
+#hero__date {
+  color: var(--primary-color);
+  margin-bottom: 0;
+  font-weight: 200;
+}
+
+.hero__title {
+  margin: var(--spacing-s) 0;
+}
+
+.hero__animation > div {
+  position: absolute;
+  color: var(--primary-color);
+  opacity: 0.6;
+  fill: currentColor;
+}
+
+.hero__animation--1 {
+  left: 0;
+  bottom: 70px;
+}
+
+.hero__animation--2 {
+  right: 240px;
+  top: 120px;
+}
+
+.hero__curve {
+  width: 100%;
+  position: absolute;
+  // For some reason there is padding being inserted in the svg
+  bottom: -10px;
+  z-index: 2;
+}
+
+.hero__wave {
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  bottom: -10px;
+}
+
+@keyframes from0to360 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+   transform: rotate(360deg);
+  }
+}
+
+@keyframes from360to0 {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+#blob-1 {
+  animation: from0to360 5s linear infinite;
+  transform-origin: 145px 150px;
+  cx: 150;
+  cy: 145;
+  r: 100;
+}
+
+#blob-2 {
+  animation: from360to0 10s linear infinite;
+  transform-origin: 155px 150px;
+  cx: 150;
+  cy: 155;
+  r: 100;
+}
+
+#blob-3 {
+  animation: from0to360 15s linear infinite;
+  transform-origin: 150px 145px;
+  cx: 145;
+  cy: 150;
+  r: 100;
+}
+
+#blob-4 {
+  animation: from360to0 12.5s linear infinite;
+  transform-origin: 150px 155px;
+  cx: 155;
+  cy: 150;
+  r: 100;
+}

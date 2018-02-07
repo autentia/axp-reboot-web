@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  background: url("/static/imgs/pattern.svg") repeat;
+  font-size: 16px;
+  line-height: 1.8;
+  background-repeat: space;
+  color: var(--dark-color);
+  font-family: var(--base-font);
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+  text-decoration: none;
+  color: var(--secondary-color);
+  display: inline-block;
+  overflow: hidden;
+}
+
+a:before, a:after {
+  content: "";
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+
+a:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary-color);
+  transform: translateX(-100%);
+}
+
+a:hover:before {
+  transform: translateX(0);
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: lighter;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-s) var(--spacing-m);
+  letter-spacing: 0.15rem;
+  border-radius: var(--border);
+  transition: 0.5s ease all;
+  outline: 0;
+}
+
+button:hover {
+  animation: gradient 2s ease infinite;
+  cursor: pointer;
+}
+
+button:hover:after {
+  opacity: 0.5;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
+}

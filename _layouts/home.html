@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600|Open+Sans:400,400i,600" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <body>
     <main class="main">
       <header class="header">
         <div class="header__wrapper">
-          <div class="header__logo">
-            <a data-link="home" class="header__link" href="#">Logo</a>
-          </div>
-          <div>
-              <a data-link="home" class="header__link" href="#">Inicio</a>
+
+          <input class="header__hamburger-menu__btn" type="checkbox" id="menu-btn" />
+          <label class="header__hamburger-menu__icon" for="menu-btn">
+            <span class="header__hamburger-menu__navicon"></span>
+          </label>
+
+          <div class="header__links">
+            <div class="header__logo">
+              <a data-link="home" class="header__link" href="#">Logo</a>
             </div>
-          <div>
-            <a data-link="info" class="header__link" href="#">Sobre AXP Reboot</a>
-          </div>
-          <div>
-            <a data-link="call-for-papers" class="header__link" href="#">CallForPapers</a>
-          </div>
-          <div>
-            <a data-link="venue" class="header__link" href="#">Localización</a>
-          </div>
-          <div>
-            <a data-link="organizers" class="header__link" href="#">Patrocinadores</a>
+            <div>
+                <a data-link="home" class="header__link" href="#">Inicio</a>
+              </div>
+            <div>
+              <a data-link="info" class="header__link" href="#">Sobre AXP Reboot</a>
+            </div>
+            <div>
+              <a data-link="call-for-papers" class="header__link" href="#">CallForPapers</a>
+            </div>
+            <div>
+              <a data-link="venue" class="header__link" href="#">Localización</a>
+            </div>
+            <div>
+              <a data-link="organizers" class="header__link" href="#">Patrocinadores</a>
+            </div>
           </div>
         </div>
       </header>

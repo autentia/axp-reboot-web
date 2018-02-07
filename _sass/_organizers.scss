@@ -1,0 +1,43 @@
+.organizers {
+  grid-area: o;
+}
+
+.organizers__bg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+}
+
+.organizers__bg > img {
+  width: 100%;
+  height: auto;
+}
+
+.organizers__wrapper {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.organizers__title {
+  margin-top: 0;
+  margin-bottom: var(--spacing-x);
+}
+
+.organizers__subtitle {
+  margin-bottom: 0;
+}
+
+.organizers__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  grid-gap: var(--spacing-s);
+}
+
+.organizers__grid > img {
+  width: 100%;
+  height: 100%,
+}
+

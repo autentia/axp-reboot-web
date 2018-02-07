@@ -1,0 +1,44 @@
+.call-for-papers {
+  grid-area: p;
+  color: white;
+  padding: var(--spacing-x);
+  height: 800px;
+  background: url("/static/imgs/curve-2.svg") no-repeat top left;
+  background-size: cover;
+}
+
+.call-for-papers__wrapper {
+  max-width: var(--container);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.call-for-papers__title {
+  margin-bottom: 0;
+}
+
+.call-for-papers__button {
+  text-transform: uppercase;
+  background-color: white;
+  color: var(--primary-color);
+  padding: var(--spacing) var(--spacing-x);
+  margin-top: var(--spacing-m);
+  border: 2px solid var(--primary-color);
+}
+
+.call-for-papers__button:hover {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+.call-for-papers__button:hover:after {
+  opacity: 0;
+}
+

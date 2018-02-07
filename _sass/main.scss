@@ -1,0 +1,160 @@
+$mobile: 600px;
+$table: 800px;
+$desktop: 1000px;
+
+:root {
+  --primary-color: #f9636c;
+  --secondary-color: #6147D5;
+  --primary-gradient: linear-gradient(to right, #6147d5, #5dabdb);
+  --dark-color: #4a4a4a;
+
+  --box-shadow: 0 5px 6px #4a4a5a;
+
+  --container: 800px;
+
+  --spacing: 1rem;
+  --spacing-s: 0.5rem;
+  --spacing-m: 2rem;
+  --spacing-x: 4rem;
+
+  --border: 999px;
+
+  --title-font: 'Nunito', sans-serif;
+  --base-font: 'Open Sans', sans-serif;
+}
+
+.anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100px);
+  visibility: hidden;
+}
+
+.main {
+  display: grid;
+  min-height: 100vh;
+  grid-template-areas:
+  "h h h"
+  ". i ."
+  "p p p"
+  ". v ."
+  ". o ."
+  ". c ."
+  "f f f";
+  grid-template-columns: 1fr minmax(auto, var(--container)) 1fr;
+}
+
+.main > * {
+  margin: var(--spacing-x) 0;
+  position: relative;
+}
+
+.main > * > h2 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-x);
+}
+
+@import
+  "base",
+  "header",
+  "hero",
+  "info",
+  "call-for-papers",
+  "venue",
+  "organizers",
+  "footer",
+  "code-of-conduct";
+
+@media (max-width: $mobile) {
+  :root {
+    --container: 400px;
+    --spacing-x: 2rem;
+  }
+
+  h1, h2 {
+    line-height: 1.4;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "h"
+    "i"
+    "p"
+    "v"
+    "o"
+    "c"
+    "f";
+  }
+
+  .main > * {
+    padding: var(--spacing-m);
+  }
+
+  .header__links {
+    flex-direction: column;
+  }
+
+  .header__link {
+    color: var(--dark-color);
+  }
+
+  .hero__title {
+    font-size: 1.75rem;
+    margin: var(--spacing-m) 0;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+  }
+
+  .venue__wrapper {
+    flex-direction: column;
+  }
+
+  #blob-1 {
+    animation: from0to360 5s linear infinite;
+    transform-origin: 145px 150px;
+    cx: 150;
+    cy: 145;
+    r: 25 ;
+  }
+
+  #blob-2 {
+    animation: from360to0 10s linear infinite;
+    transform-origin: 155px 150px;
+    cx: 150;
+    cy: 155;
+    r: 25 ;
+  }
+
+  #blob-3 {
+    animation: from0to360 15s linear infinite;
+    transform-origin: 150px 145px;
+    cx: 145;
+    cy: 150;
+    r: 25 ;
+  }
+
+  #blob-4 {
+    animation: from360to0 12.5s linear infinite;
+    transform-origin: 150px 155px;
+    cx: 155;
+    cy: 150;
+    r: 25 ;
+  }
+
+  .footer__subfooter > div:first-child {
+    display: none;
+  }
+
+  .footer__subfooter > div:last-child {
+    margin-left: 0;
+  }
+
+  .footer__subfooter a {
+    padding: 0;
+  }
+
+}
