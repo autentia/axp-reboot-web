@@ -25,6 +25,10 @@
           applyActiveLinkStyles(link)
         }
 
+        if (areWeOnMobile()) {
+          toggleMenu()
+        }
+
         navigateTo(link.dataset.link)
       }, false)
     })
@@ -37,6 +41,21 @@
     })
 
     element.classList.toggle('header__link--active')
+  }
+
+  function addHeaderListener() {
+    const hamburger = document.querySelector('#menu-btn')
+    const header = document.querySelector('.header')
+
+    hamburger.addEventListener('click', () => {
+      header.classList.toggle('header--clicked')
+      toggleMenu()
+    })
+  }
+
+  function toggleMenu() {
+    const menuButton = document.querySelector('#menu-btn')
+    menuButton.click()
   }
 
   function navigateTo(destination) {
@@ -60,7 +79,13 @@
     }
   }
 
+  function areWeOnMobile() {
+    return window.matchMedia("(min-width: 600px)")
+
+  }
+
   addListenerToScroll()
   addLinksListeners()
+  addHeaderListener()
 
 })()

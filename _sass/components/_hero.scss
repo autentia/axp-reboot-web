@@ -1,5 +1,5 @@
 .hero {
-  color: white;
+  color: var(--background-color);
   grid-area: h;
   display: flex;
   height: 100vh;
@@ -52,12 +52,12 @@
   position: absolute;
   // For some reason there is padding being inserted in the svg
   bottom: -10px;
-  z-index: 2;
+  z-index: var(--middle);
 }
 
 .hero__wave {
   width: 100%;
-  z-index: 1;
+  z-index: var(--bottom);
   position: absolute;
   bottom: -10px;
 }

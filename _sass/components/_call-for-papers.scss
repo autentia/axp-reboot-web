@@ -1,8 +1,8 @@
 .call-for-papers {
   grid-area: p;
-  color: white;
+  color: var(--background-color);
   padding: var(--spacing-x);
-  height: 800px;
+  height: 1000px;
   background: url("/static/imgs/curve-2.svg") no-repeat top left;
   background-size: cover;
 }
@@ -25,7 +25,7 @@
 
 .call-for-papers__button {
   text-transform: uppercase;
-  background-color: white;
+  background-color: var(--background-color);
   color: var(--primary-color);
   padding: var(--spacing) var(--spacing-x);
   margin-top: var(--spacing-m);
@@ -33,9 +33,9 @@
 }
 
 .call-for-papers__button:hover {
-  border: 2px solid white;
+  border: 2px solid var(--background-color);
   background: transparent;
-  color: white;
+  color: var(--background-color);
 }
 
 .call-for-papers__button:hover:after {

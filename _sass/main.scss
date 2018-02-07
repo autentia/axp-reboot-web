@@ -1,27 +1,4 @@
-$mobile: 600px;
-$table: 800px;
-$desktop: 1000px;
 
-:root {
-  --primary-color: #f9636c;
-  --secondary-color: #6147D5;
-  --primary-gradient: linear-gradient(to right, #6147d5, #5dabdb);
-  --dark-color: #4a4a4a;
-
-  --box-shadow: 0 5px 6px #4a4a5a;
-
-  --container: 800px;
-
-  --spacing: 1rem;
-  --spacing-s: 0.5rem;
-  --spacing-m: 2rem;
-  --spacing-x: 4rem;
-
-  --border: 999px;
-
-  --title-font: 'Nunito', sans-serif;
-  --base-font: 'Open Sans', sans-serif;
-}
 
 .anchor {
   position: absolute;
@@ -57,14 +34,15 @@ $desktop: 1000px;
 
 @import
   "base",
-  "header",
-  "hero",
-  "info",
-  "call-for-papers",
-  "venue",
-  "organizers",
-  "footer",
-  "code-of-conduct";
+  "theme",
+  "components/header",
+  "components/hero",
+  "components/info",
+  "components/call-for-papers",
+  "components/venue",
+  "components/organizers",
+  "components/footer",
+  "components/code-of-conduct";
 
 @media (max-width: $mobile) {
   :root {
@@ -97,7 +75,7 @@ $desktop: 1000px;
   }
 
   .header__link {
-    color: var(--dark-color);
+    color: var(--foreground-color);
   }
 
   .hero__title {
