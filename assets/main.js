@@ -1,5 +1,25 @@
 (() => {
 
+  function handleActiveSection() {
+    const controller = new ScrollMagic.Controller()
+
+    const sections = [
+      'hero',
+      'info',
+      'call-for-papers',
+      'venue',
+      'organizers'
+    ]
+
+    sections.forEach(section => {
+      console.log(section, document.querySelector(`.${section}`).clientHeight)
+      new ScrollMagic.Scene({ triggerElement: `.${section}` , duration: document.querySelector(`.${section}`).clientHeight})
+        .setClassToggle(`.header__link[data-link="${section}"]`, 'header__link--active')
+        .addIndicators()
+        .addTo(controller)
+    })
+  }
+
   function addListenerToScroll() {
     const header = document.querySelector('.header')
     window.addEventListener('scroll', debounce(() => {
@@ -87,5 +107,6 @@
   addListenerToScroll()
   addLinksListeners()
   addHeaderListener()
+  handleActiveSection()
 
 })()
